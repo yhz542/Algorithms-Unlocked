@@ -29,7 +29,7 @@ int *Rearrange( int Data[] , int Less[] , int n , int m )
         }
         return B ;
 }
-int *Counting_Sort( int Data[] , int n , int m ) //这个排序当数组长度 n 远比 取值范围 m 小时 比较好。
+int *Counting_Sort( int Data[] , int n , int m ) //这个排序时间复杂度为O(n) ，即便取值范围中有很多值为0依然不会浪费时间
 {
         int *Equal = CountKeysEqual( Data , n , m ) ;
         int *Less = CountKeysLess( Equal , m ) ;
