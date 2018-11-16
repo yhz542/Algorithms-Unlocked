@@ -1,0 +1,12 @@
+void Insertion_Sort( int Data[] , int Length )
+{
+        for ( int i = 1 , key , j ; i < Length ; ++i )
+        {
+                key = Data[ i ] ;
+                for( j = i - 1 ; j >= 0 && Data[ j ] > key ; --j )
+                {
+                        Data[ j + 1 ] = Data[ j ] ;
+                }
+                Data[ j + 1 ] = key ;
+        }
+}
