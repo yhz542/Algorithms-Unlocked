@@ -1,4 +1,4 @@
-void Insertion_Sort( int Data[] , int Length )
+void Insertion_Sort( int Data[] , int Length )//输入 需要排序的数组首地址，以及数组的长度
 {
         for ( int i = 1 , key , j ; i < Length ; ++i )
         {
@@ -7,6 +7,6 @@ void Insertion_Sort( int Data[] , int Length )
                 {
                         Data[ j + 1 ] = Data[ j ] ;
                 }
-                Data[ j + 1 ] = key ;
+                Data[ j + 1 ] = key ;//由于--j的存在，所以找到目标后，需要用j+1的下标进行交换
         }
 }
