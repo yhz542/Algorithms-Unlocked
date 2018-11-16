@@ -9,7 +9,7 @@ int *CountKeysEqual( int *Data , int n , int m )//n为长度 m为数组元素的
         }
         return Equal ;
 }
-int *Rearrange1( int Equal[] , int n, int m )
+int *Rearrange1( int Equal[] , int n, int m )//如果取值范围中有很多值的个数为0 ，则会浪费时间。不如原版CountingSort
 {
         int *B = ( int *)malloc( sizeof( int ) * n ) ;//创建一个新数组
         for ( int i = 0 , cnt = 0 ; cnt != n ; ++i ) //遍历equal数组中的元素，当读入数目达到 n 时，即代表所有元素都已排序完毕，跳出循环
