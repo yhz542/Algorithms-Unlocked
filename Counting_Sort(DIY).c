@@ -9,9 +9,9 @@ int *CountKeysEqual( int *Data , int n , int m )//n为长度 m为数组元素的
         }
         return Equal ;
 }
-int *Rearrange1( int Equal[] , int n, int m )//如果取值范围中有很多值的个数为0 ，则会浪费时间。不如原版CountingSort
+int *Rearrange1( int Equal[] , int n, int m )//时间复杂度和原计数排序算法一样，都是O(m+n)
 {
-        int *B = ( int *)malloc( sizeof( int ) * n ) ;//创建一个新数组
+        int *B = ( int *)malloc( sizeof( int ) * n ) ;//创建一个新数组,这里可以将原数组Data读入排序，节省空间
         for ( int i = 0 , cnt = 0 ; cnt != n ; ++i ) //遍历equal数组中的元素，当读入数目达到 n 时，即代表所有元素都已排序完毕，跳出循环
         {                                            //因为m的取值范围可能还没到m-1就已读入完毕，所以以n作为判断条件。
                 for ( int  j = 0 ; j < Equal[ i ] ; ++j )//equal元素代表每个i的个数，将其按顺序全部读入新数组中。
