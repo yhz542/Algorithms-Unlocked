@@ -2,13 +2,9 @@ int *TopLogical_Sort(int graph[][n])//邻接矩阵版本
 {
         int indegree[ n ] ={ 0 } ;//声明入度并进行初始化
         for( int i = 0 ; i < n ; ++i )
-        {
                 for( int j = 0 ; j < n ; ++j )
-                {
                         if( graph[ i ][ j ] )
                                 ++indegree[ j ] ;//计算每个结点的入度
-                }
-        }
         int next[ n ] ;//创建next列表，用于存放所有入度为0的结点
         int posNextInsert = 0 ;//插入next列表的下标位置
         for( int node = 0 ; node < n ; ++node )
