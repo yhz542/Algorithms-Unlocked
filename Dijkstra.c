@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<stdio.h>//选取shortest最小的元素通过数组遍历计算
 #include<stdlib.h>
 #define Max 65535
 typedef struct node *pos;
