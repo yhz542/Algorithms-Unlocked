@@ -71,3 +71,14 @@ void Bellman_Ford(int graph[][NumNode],int start)
 4 0 2
 测试数据 输出应该为0 2 4 7 -2 代表0点到个点的最短距离。
 */
+/*程序
+输入：
+graph：一个有向图
+start:源顶点
+输出：与Dijkstra相同，都是源点start到各个顶点的最短距离。
+核心算法步骤：
+1.对于除了源点start以外的任意顶点v,shortest[v]被赋值为Infinity,shortest[start]赋值为0,对所有顶点v，pred[v]赋值为NULL
+2.i从1~n-1依次取值：
+        对图graph中的所有边( u , v )依次遍历：
+                对每一条边检测shortest[v] > shortest[u]+graph[u][v]
+                        如果满足条件就对shortest[v] 和 pred[v]进行赋值
