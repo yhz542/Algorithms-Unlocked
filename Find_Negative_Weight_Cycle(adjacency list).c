@@ -25,6 +25,7 @@ void Find_Negative_Weight_Cycle(int graph[][NumNode],int shortest[],int pred[])
                                         cycle[index++]=x;
                                         while(v!=x)
                                         {
+                                                visited[v]=1;
                                                 cycle[index++]=v;
                                                 v=pred[v];
                                         }
