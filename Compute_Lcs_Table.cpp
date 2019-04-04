@@ -9,7 +9,7 @@ int main()
 	getline(cin, a);
 	getline(cin, b);
 	vector<vector<int>> Lcs=ComputeLcsTable(a,b);
-	for (auto beg1 = Lcs.begin(); beg1 != Lcs.end(); beg1++)
+	for (auto beg1 = Lcs.begin(); beg1 != Lcs.end(); beg1++)//用于显示lcs的数组值 
 	{
 		for (auto beg2 = (*beg1).begin(); beg2 != (*beg1).end(); beg2++)
 		{
